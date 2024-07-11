@@ -37,6 +37,7 @@ const OverlayCanvas = () => {
                     innerImage.src = background; // Replace with the path to your inner image
                     innerImage.onload = () => {
                         innerContext.drawImage(innerImage, 0, 0, innerCanvas.width, innerCanvas.height);
+                        innerContext.translate(200, 400);
                         drawInnerCanvasInOuterCanvas();
                     };
                 };
@@ -48,6 +49,7 @@ const OverlayCanvas = () => {
         const outerCanvas = outerCanvasRef.current;
         const outerContext = outerCanvas?.getContext('2d');
         const innerCanvas = innerCanvasRef.current;
+
 
         if (outerCanvas && outerContext && innerCanvas) {
             outerContext.drawImage(innerCanvas,
