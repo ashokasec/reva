@@ -1,5 +1,4 @@
 import { useRef, useEffect } from 'react';
-import background from "./../assets/default_bg.jpg"
 import Sidebar from './sidebar';
 
 const OverlayCanvas = () => {
